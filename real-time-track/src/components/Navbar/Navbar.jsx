@@ -3,6 +3,7 @@ import logo from '../../assets/logo.png'
 import arrow_icon from '../../assets/arrow_icon.png'
 import { CoinContext } from '../../Context/CoinContext'
 import { Link } from 'react-router-dom'
+import Singup from '../Sign-up'
 
 const Navbar = () => {
   const { setCurrency } = useContext(CoinContext)
@@ -29,7 +30,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="navbar flex items-center justify-between px-6 py-4 bg-gray-800 text-white">
+    <div className="navbar flex items-center justify-between  px-6 py-4 bg-gray-800 text-white">
       <Link to={'/'} className="logo-container flex items-center">
         <img src={logo} alt="" className="logo w-10 h-10 mr-2" />
         <span className="logo-text text-xl font-bold">Cryptoline</span>
@@ -37,9 +38,8 @@ const Navbar = () => {
 
       <ul className="flex space-x-6">
         <Link to={'/'} className="hover:text-gray-400"><li>Home</li></Link>
-        <li className="hover:text-gray-400">Features</li>
-        <li className="hover:text-gray-400">Pricing</li>
-        <li className="hover:text-gray-400">Blog</li>
+        <Link to={'/Features'} className="hover:text-gray-400"><li>Features</li></Link>
+
       </ul>
 
       <div className="nav-right flex items-center space-x-4">
@@ -50,9 +50,12 @@ const Navbar = () => {
           <option value="usd">USD</option>
           <option value="eur">EUR</option>
         </select>
+        <a href="/signup">
         <button className="flex items-center bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
           Sign up <img src={arrow_icon} alt="" className="w-4 h-4 ml-2" />
         </button>
+      </a>
+
       </div>
     </div>
   )
