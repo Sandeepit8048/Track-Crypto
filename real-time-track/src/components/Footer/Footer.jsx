@@ -1,10 +1,11 @@
 import React from 'react'
-import './Footer.css'
 
 const Footer = () => {
   return (
-    <div className='footer'>
-      <p>Copyright @ 2025, CryptoLine - Riduan - All Right Reserved.</p>
+    <div className="footer bg-gray-800 text-white text-center py-4">
+      <p className="text-sm">
+        Copyright @ 2025, CryptoLine - Riduan - All Rights Reserved.
+      </p>
     </div>
   )
 }
