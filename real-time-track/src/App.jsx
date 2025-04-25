@@ -1,15 +1,20 @@
-import './App.css'
-import Footer from './components/Footer/Footer'
+import React from 'react'
 import Navbar from './components/Navbar/Navbar'
-function App() {
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home/Home'
+import Coin from './pages/Coin/Coin'
+import Footer from './components/Footer/Footer'
 
-
+const App = () => {
   return (
-    <>
-    <Navbar/>
-      <h1>Real Time Track</h1>
-      <Footer />
-    </>
+    <div className='app'>
+        <Navbar/>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/coin/:coinId' element={<Coin/>}/>
+        </Routes>
+        <Footer/>
+    </div>
   )
 }
 
