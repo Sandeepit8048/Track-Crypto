@@ -137,7 +137,7 @@ function Singup() {
         </button>
 
         {isSubmitSuccessful && (
-          <p className="text-green-600 text-center font-medium">Thank-you!</p>
+          <p className="text-green-600 text-center font-medium">Submit Successfully!</p>
         )}
       </form>
     </div>
