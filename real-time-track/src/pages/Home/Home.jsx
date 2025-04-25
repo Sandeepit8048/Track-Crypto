@@ -32,9 +32,10 @@ const Home = () => {
     <div className="home flex flex-col items-center justify-center px-4 py-8 bg-gray-100">
       <div className="hero text-center mb-8">
         <h1 className="text-4xl font-bold mb-4">
-          Largest <br /> Crypto Marketplace
+          All Cryptocurrencies
         </h1>
-        <p className="text-lg text-gray-600 mb-6">
+        <div>
+        <p className="text-mb text-gray-600 mb-5">
           Welcome to the World's largest Cryptocurrency marketplace. Sign up to explore more about cryptos.
         </p>
         <form onSubmit={searchHandler} className="flex flex-col sm:flex-row items-center gap-4">
@@ -60,6 +61,7 @@ const Home = () => {
             Search
           </button>
         </form>
+        </div>
       </div>
       <div className="crypto-table w-full max-w-5xl bg-white shadow-md rounded-lg">
         <div className="table-layout grid grid-cols-5 gap-4 p-4 border-b border-gray-200 text-gray-700 font-semibold">
